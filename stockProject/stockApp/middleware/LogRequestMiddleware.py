@@ -27,6 +27,7 @@ class LogRequestMiddleware(MiddlewareMixin):
                     databaseTime=dbtime,
                     endpointUrl=request.get_full_path(),
                     requestId=id,
+                    user_id=str(request.user.id) if request.user.is_authenticated else "",
                     timestamp = datetime.datetime.now()
                 )
 

@@ -47,3 +47,14 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+celerybeat-schedule.*
+*.bak
+*.dat
+*.dir
+
+# Logs
+logs/

@@ -13,4 +13,4 @@ class MarketLog(models.Model):
     databaseTime = models.FloatField()
     endpointUrl = models.URLField()
     requestId = models.CharField(max_length=255)
-
+    user_id = models.CharField(max_length=255, null=True, blank=True)
