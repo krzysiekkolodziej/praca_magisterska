@@ -178,10 +178,10 @@ services:
       - gielda_network
     environment:
       ENV_ID: "locust"
-      LOCUST_USERS: 90
+      LOCUST_USERS: 10
       LOCUST_SPAWN_RATE: 1
-      LOCUST_TIME: 10m
-      LOCUST_CLASS: WebsiteActiveUser
+      LOCUST_TIME: 1h
+      LOCUST_CLASS: WebsiteActiveUser WebsiteReadOnlyUser WebsiteActiveUserWtihMarketAnalize
       TIME_BETWEEN_REQUESTS: 0.6
     depends_on:
       - web
