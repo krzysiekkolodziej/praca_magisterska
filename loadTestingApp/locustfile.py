@@ -236,7 +236,7 @@ class WebsiteActiveUserWtihMarketAnalize(FastHttpUser):
         timestamp = datetime.now()
         cursor.execute(
             """INSERT INTO "stockApp_trafficlog" (timestamp, "requestid", "apiTime","userClass") VALUES (%s, %s, %s,%s)""",
-            (timestamp, id, response_time / 1000.0,userClass)
+            (timestamp, id, response_time / 1000.0, userClass)
         )
         conn.commit()
     

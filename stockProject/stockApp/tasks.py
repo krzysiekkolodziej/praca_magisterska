@@ -102,7 +102,8 @@ def executeTransactions(companyIds):
             numberOfSellOffers=numberOfSellOffers,
             numberOfBuyOffers=numberOfBuyOffers,
             timestamp = datetime.datetime.now(),
-            companyIds = companyIds
+            companyIds = companyIds,
+            user_id=str(buyer.id)
             )                            
         return companyIds
     except Exception as e:
