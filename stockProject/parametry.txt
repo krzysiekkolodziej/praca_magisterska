@@ -1,8 +1,1 @@
-10,1,1h,WebsiteActiveUser WebsiteReadOnlyUser WebsiteActiveUserWtihMarketAnalize,30.0,0.6,3
-130,1,1h,WebsiteActiveUser WebsiteReadOnlyUser WebsiteActiveUserWtihMarketAnalize,30.0,0.6,3
-60,1,1h,WebsiteActiveUser WebsiteReadOnlyUser WebsiteActiveUserWtihMarketAnalize,30.0,0.2,3
-60,1,1h,WebsiteActiveUser WebsiteReadOnlyUser WebsiteActiveUserWtihMarketAnalize,30.0,1.1,3
-60,1,1h,WebsiteActiveUser WebsiteReadOnlyUser WebsiteActiveUserWtihMarketAnalize,5.0,0.6,3
-60,1,1h,WebsiteActiveUser WebsiteReadOnlyUser WebsiteActiveUserWtihMarketAnalize,50.0,0.6,3
-60,1,1h,WebsiteActiveUser WebsiteReadOnlyUser WebsiteActiveUserWtihMarketAnalize,30.0,0.6,2
-60,1,1h,WebsiteActiveUser WebsiteReadOnlyUser WebsiteActiveUserWtihMarketAnalize,30.0,0.6,8
+1000,1,2h,WebsiteActiveUser WebsiteReadOnlyUser WebsiteActiveUserWtihMarketAnalize,30.0,0.6,3

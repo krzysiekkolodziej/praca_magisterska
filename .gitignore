@@ -56,5 +56,3 @@ celerybeat-schedule.*
 *.dat
 *.dir
 
-# Logs
-logs/
