@@ -58,7 +58,12 @@ services:
       python manage.py migrate &&
       python manage.py migrate --database=test &&
       python manage.py collectstatic --noinput &&
-      gunicorn stockProject.wsgi:application --bind 0.0.0.0:8080"
+      gunicorn stockProject.wsgi:application \
+      --workers 4 \
+      --worker-class gevent \
+      --worker-connections 1000 \
+      --timeout 120 \
+      --bind 0.0.0.0:8080"
     volumes:
       - .:/app
     ports:
@@ -216,7 +221,7 @@ EOL
 echo "Plik docker-compose.generated.yml został wygenerowany."
 
 # Uruchomienie kontenerów za pomocą docker-compose
-docker-compose -f docker-compose.generated.yml up -d
+docker-compose -f docker-compose.generated.yml up 2>&1 | tee up.log
 
 # Sprawdzenie, czy kontenery zostały poprawnie uruchomione
 if [ $? -eq 0 ]; then

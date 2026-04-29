@@ -52,12 +52,12 @@ def generateValidPassword():
 
 def register(self):
     login = generateRandomData()
-    self.client.post("/api/signUp", json=login, context={"userClass": self.userClass})
+    self.client.post("/api/signUp", json=login, context={"userClass": self.userClass}, timeout=300)
     data = {
         'username': login['username'],
         'password': login['password']
     }
-    response = self.client.post("/api/signIn",json=data, context={"userClass": self.userClass})
+    response = self.client.post("/api/signIn",json=data, context={"userClass": self.userClass}, timeout=300)
     self.token = response.json()['token']
     companyName = fake.company()
     self.client.post("/api/addCompany",headers={"authorization": "Token " + self.token}, json={"name":companyName}, context={"userClass": self.userClass})
@@ -74,7 +74,7 @@ def buyOffer(self, companyId, maxAmount):
         "startAmount": amount,
         "amount": amount,
     }
-    self.client.post("/api/addBuyOffer", headers={"authorization": "Token " + self.token}, json=buyOfferData, context={"userClass": self.userClass})
+    self.client.post("/api/addBuyOffer", headers={"authorization": "Token " + self.token}, json=buyOfferData, context={"userClass": self.userClass}, timeout=300)
     return 1
     
 def sellOffer(self, maxAmount,companyId = None):
@@ -99,7 +99,7 @@ def sellOffer(self, maxAmount,companyId = None):
         "startAmount": amountToSell,
         "amount": amountToSell,
     }
-    self.client.post("/api/addSellOffer", headers={"authorization": "Token " + self.token}, json=sellOfferData, context={"userClass": self.userClass})
+    self.client.post("/api/addSellOffer", headers={"authorization": "Token " + self.token}, json=sellOfferData, context={"userClass": self.userClass}, timeout=300)
     return 1
     
 class WebsiteReadOnlyUser(FastHttpUser):
